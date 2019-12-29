@@ -1,0 +1,16 @@
+public static String ungroupify(String text) {
+        text = text.replace(" ", "");
+        text = text.replace("x", "");
+        return text;
+    }
+    public static String decryptString(String text, int key) {
+        text = ungroupify(text);
+        text = caesarify(text, - key);
+        return text;
+    }
+
+
+//Add this to main
+        String plaintext = decryptString(cyphertext, 5);
+
+        System.out.println(plaintext);
